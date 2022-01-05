@@ -21,10 +21,7 @@
 
 $(".tociki-title").each(function(t){(t=$(this)).on("click",function(){t.toggleClass("opened"),$("#tociki").slideToggle(180)})}),$("#tociki").toc({content:".post-body",headings:"h2,h3,h4"}),$("#tociki li a").each(function(t){(t=$(this)).click(function(){return $("html,body").animate({scrollTop:$(t.attr("href")).offset().top},500),!1})});
 
-/*!Comment System*/
-var jsCommentPages=function(){var t,a,e=function(){$(".js-page-tweet-count").each(function(){var t=$(this);$.getJSON("http://urls.api.twitter.com/1/urls/count.json?callback=?",{url:t.attr("href")},function(a){t.text(a.count),t=null})})},n=function(){a.addClass("js-inactive-tab"),(a=$(this)).removeClass("js-inactive-tab"),t.hide(),(t=$("#"+a.attr("id")+"-page")).show()};$("document").ready(function(){$(".comments-tab").each(function(){var t=$(this);t.click(n).addClass("js-inactive-tab"),t.attr("id"),t=null}),e();var s=$(".js-default-tab:first"),i="#blogger-comments";s.length>0&&(i="#"+s.attr("id")),(a=$(i)).removeClass("js-inactive-tab"),(t=$(i+"-page")).show()})}();
-
-/*! ETC */
+ /*! ETC */
 
 $(function () {
    function msgError() {
@@ -197,3 +194,6 @@ $("#new-bottom-ad-placeholder").each(function() {
       l = $(l).find(".blog-post h1.entry-title").text();
       $(".post-prev a .block-inner-inner p").text(l);
     }});
+                                              
+/*!Comment System*/
+var jsCommentPages=function(){var t,a,e=function(){$(".js-page-tweet-count").each(function(){var t=$(this);$.getJSON("http://urls.api.twitter.com/1/urls/count.json?callback=?",{url:t.attr("href")},function(a){t.text(a.count),t=null})})},n=function(){a.addClass("js-inactive-tab"),(a=$(this)).removeClass("js-inactive-tab"),t.hide(),(t=$("#"+a.attr("id")+"-page")).show()};$("document").ready(function(){$(".comments-tab").each(function(){var t=$(this);t.click(n).addClass("js-inactive-tab"),t.attr("id"),t=null}),e();var s=$(".js-default-tab:first"),i="#blogger-comments";s.length>0&&(i="#"+s.attr("id")),(a=$(i)).removeClass("js-inactive-tab"),(t=$(i+"-page")).show()})}();
